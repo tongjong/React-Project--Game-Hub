@@ -7,7 +7,7 @@ const GameGrid = () => {
   return (
     <>
       {error && <Text>{error}</Text>}
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 2, xl: 4 }} gap={10}>
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} gap={10}>
         {games.map((g) => (
           <GameCard game={g} />
         ))}
