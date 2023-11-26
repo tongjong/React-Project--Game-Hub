@@ -10,7 +10,7 @@ interface FetchResponse<T> {
 const useData = <T,>(
   endpoint: string,
   requestConfig?: AxiosRequestConfig,
-  deps?: unknown
+  dep?: unknown
 ) => {
   const [data, setData] = useState<T[]>([]);
   const [error, setError] = useState("");
@@ -35,10 +35,9 @@ const useData = <T,>(
           setIsLoading(false);
         });
       return () => controller.abort();
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [deps]
+    [dep]
   );
   return { data, error, isLoading };
 };
