@@ -1,6 +1,6 @@
 import useData from "./useData";
 
-interface platforms {
+export interface platforms {
   id: number;
   name: string;
   slug: string;
