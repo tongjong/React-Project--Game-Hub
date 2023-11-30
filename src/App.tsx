@@ -45,7 +45,7 @@ function App() {
 
       <GridItem area="main">
         <Box paddingLeft={2}>
-          <Heading marginBottom={3}>
+          <Heading margin={3}>
             {gameQuery.platform?.name} {gameQuery.genre?.name} Games
           </Heading>
           <HStack>
