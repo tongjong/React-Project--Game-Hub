@@ -3,11 +3,14 @@ import logo from "../assets/logo.png";
 import DarkModeSwitch from "./DarkModeSwitch";
 import SearchGamesInput from "./SearchGamesInput";
 
-const Navbar = () => {
+interface Props {
+  onSearch: (searchText: string) => void;
+}
+const Navbar = ({ onSearch }: Props) => {
   return (
     <HStack padding="8px">
       <Image src={logo} boxSize="60px" />
-      <SearchGamesInput />
+      <SearchGamesInput onSearch={onSearch} />
       <DarkModeSwitch />
     </HStack>
   );
