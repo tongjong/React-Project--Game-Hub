@@ -42,7 +42,7 @@ const GenresList = ({ onSelectedGenre, selectedGenre }: Props) => {
                 variant="link"
                 fontSize="lg"
               >
-                {g.name} {g.games_count}
+                {g.name}
               </Button>
             </HStack>
           </ListItem>
